@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <title>Web :: Fametro</title>
+
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+
+  <body>
+    <form name="dados" action="" method="post" onSubmit="return adicionar();">
+        <fieldset>
+            <legend>Cadastro de pessoas</legend>
+            <div class="dado">
+                <label for="nome" class="required">Nome</label>
+                <input id="nome" type="text" required autofocus name="nome">
+            </div>
+            <div class="dado">
+                <label for="idade" class="required">Idade</label>
+                <input id="idade" type="number" required name="idade" min="1" max="120"
+                        onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)">
+            </div>
+            <div class="dado">
+                <label for="sobre">Sobre</label>
+                <textarea id="sobre" rows="4" cols="50" maxlength="255"></textarea>
+            </div>
+            <div class="botoes">
+                <input class="botao" type="submit" value="Salvar" />
+                <input class="botao" type="reset" value="Limpar" onclick="document.dados.nome.focus();" />
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Listagem de pessoas</legend>
+            <!-- table>thead>tr>th*4+tbody -->
+            <table id="lista-pessoas">
+              <caption>
+                <input class="botao criar-aleatoria" type="button" value="Criar pessoa aleatória" onclick="criarAleatoria()">
+                <input class="botao remover" style="margin-left: 10px;float: left;" type="button" value="Remover todas" onclick="removerTodas()">
+              </caption>
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Idade</th>
+                  <th>Sobre</th>
+                  <th>Remover</th>
+                  <tbody></tbody>
+                </tr>
+              </thead>
+            </table>
+          </fieldset>
+    </form>
+
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

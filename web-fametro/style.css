@@ -1,0 +1,126 @@
+/* adicionar os estilos aqui */
+html,
+body {
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.card {
+  border: 1px solid #eaeaea;
+  width: 50%;
+  padding: 30px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #384d40;
+  text-transform: uppercase;
+}
+
+label.required::after {
+  content: " *";
+  color: red;
+  font-weight: bold;
+}
+
+.dado {
+  margin: 10px 0;
+}
+
+.dado input,
+.dado textarea {
+  border: 1px solid #ced4da;
+}
+
+.dado input:focus,
+.dado textarea:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(60, 248, 116, 0.25);
+}
+
+fieldset:nth-child(2) {
+  margin-top: 30px;
+}
+
+/* botões */
+.botao {
+    padding: 5px 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+    background-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: inherit;
+}
+
+.botao:hover {
+  cursor: pointer;
+}
+
+.botoes .botao {
+    color: #0da379;
+}
+
+.botoes .botao:hover {
+  background-color: #289e7c2e;
+}
+
+.botao.remover {
+    color: #f00707;
+}
+
+.botao.remover:hover {
+  background-color: #f703032e;
+}
+
+.botao.criar-aleatoria {
+    color: #6c07f0;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.botao.criar-aleatoria:hover {
+  background-color: #6c07f042;
+}
+
+/* tabela */
+table {
+  border: 2px solid rgba(60, 248, 116, 0.25);
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border-top: 2px solid rgba(60, 248, 116, 0.25);
+  padding: .35em;
+}
+
+table tbody tr:first-child {
+  border-top: 2px solid #384d40;
+}
+
+table th,
+table td {
+  text-align: center;
+}
+
+table th {
+  padding: .625em;
+}
+
+table td {
+  padding: .5em;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #384d40;
+}
