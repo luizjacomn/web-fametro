@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+
+    <title>App Show</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cadastro de pessoas</h1>
+
+    <form>
+        <div class="dado-container">
+            <label class="meu-label" for="nome">Nome</label>
+            <input id="nome" type="text">
+        </div>
+        <div class="dado-container">
+            <label class="meu-label" for="idade">Idade</label>
+            <input id="idade" type="text">
+        </div>
+        <div class="dado-container">
+            <label class="meu-label" for="sobre">Sobre</label>
+            <textarea id="sobre"></textarea>
+        </div>
+
+        <div>
+            <input type="button" class="botao" value="Salvar" onclick="adicionar()">
+        </div>
+    </form>
+
+    <section>
+        <table id="tabela-pessoas" class="tabela">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Sobre</th>
+                    <th>Remover</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
